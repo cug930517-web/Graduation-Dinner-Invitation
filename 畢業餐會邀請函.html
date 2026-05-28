@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最終章 ‧ 完美謝幕｜南開多動最後一屆畢業謝師餐會邀請函</title>
+    <!-- 引入 Google 字體與 Tailwind CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Noto Serif TC', 'serif'],
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                    },
+                    colors: {
+                        cream: {
+                            50: '#FDFBF7',   /* 主背景：極簡暖奶油 */
+                            100: '#F4F0E6',  /* 次背景：燕麥暖調 */
+                            200: '#E6DFD3',  /* 線條框線 */
+                        },
+                        wood: {
+                            600: '#8C6239',  /* 點綴木質金 */
+                            800: '#2C2520',  /* 主文字：深木炭黑 */
+                            500: '#7A6A53',  /* 次文字：暖灰褐 */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* 暖心開場動畫關鍵影格 */
+        @keyframes overlayFade {
+            0% { opacity: 1; pointer-events: auto; }
+            75% { opacity: 1; }
+            100% { opacity: 0; pointer-events: none; visibility: hidden; }
+        }
+        @keyframes textReveal {
+            0% { opacity: 0; transform: translateY(15px); filter: blur(4px); }
+            25% { opacity: 1; transform: translateY(0); filter: blur(0); }
+            75% { opacity: 1; transform: translateY(0); filter: blur(0); }
+            100% { opacity: 0; transform: translateY(-15px); filter: blur(2px); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes steam {
+            0%, 100% { transform: translateY(0) scaleX(1); opacity: 0.3; }
+            50% { transform: translateY(-5px) scaleX(1.03); opacity: 0.6; }
+        }
+
+        /* 動態類別套用 */
+        .animate-overlay {
+            animation: overlayFade 2.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+        .animate-text-reveal {
+            animation: textReveal 2.0s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
+        }
+        .fade-in { 
+            animation: fadeIn 1.4s cubic-bezier(0.4, 0, 0.2, 1) 2.0s forwards; 
+            opacity: 0; /* 確保初始狀態隱藏，等待開場動畫 */
+        }
+        .steam-line { animation: steam 4s ease-in-out infinite; }
+    </style>
+</head>
+<body class="bg-cream-50 font-sans text-wood-800 antialiased min-h-screen flex items-center justify-center p-4 md:p-8 relative">
+
+    <!-- 暖心開場動畫幕後遮罩 (Overlay) -->
+    <div class="animate-overlay fixed inset-0 bg-cream-100 flex flex-col items-center justify-center z-50 px-4">
+        <div class="text-center space-y-3">
+            <p class="animate-text-reveal font-serif tracking-[0.3em] text-wood-600 text-xs md:text-sm opacity-0">
+                LOADING THE FINAL FRAME
+            </p>
+            <h2 class="animate-text-reveal font-serif text-lg md:text-2xl text-wood-800 tracking-[0.15em] font-light opacity-0">
+                致 陪伴我們為這段動畫系旅程完美定格的您
+            </h2>
+        </div>
+    </div>
+
+    <!-- 邀請函主卡片容器 -->
+    <div class="fade-in max-w-xl w-full bg-white/70 backdrop-blur-md border border-cream-200 rounded-2xl shadow-sm p-6 md:p-12 relative overflow-hidden">
+        
+        <!-- 裝飾性線條（動畫底片與時間軸意象） -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cream-200 via-wood-600 to-cream-200"></div>
+        
+        <!-- 卡片邊框內縮視覺 -->
+        <div class="border border-cream-200/60 rounded-xl p-4 md:p-8 relative">
+            
+            <!-- 頂部幾何裝飾：象徵最後一幕的播放鍵/時鐘 -->
+            <div class="flex justify-center mb-6">
+                <div class="w-10 h-10 border border-wood-600 rounded-full flex items-center justify-center opacity-80">
+                    <div class="w-0 h-0 border-t-[5px] border-t-transparent border-l-[8px] border-l-wood-600 border-b-[5px] border-b-transparent ml-1"></div>
+                </div>
+            </div>
+
+            <!-- 主標題區 -->
+            <header class="text-center mb-8">
+                <p class="font-serif tracking-[0.2em] text-wood-500 text-xs md:text-sm uppercase mb-2">誠摯邀請 ‧ Sincerely Invited</p>
+                <h1 class="font-serif text-2xl md:text-3xl font-bold tracking-wide text-wood-800 mb-1">最終章 ‧ 完美謝幕</h1>
+                <p class="text-wood-600 text-sm font-light tracking-widest">南開科技大學 多媒體動畫應用系</p>
+            </header>
+
+            <!-- 溫馨煙霧意象線條（隱喻鍋的焱火鍋暖意） -->
+            <div class="steam-line flex justify-center my-4 opacity-40">
+                <svg width="60" height="20" viewBox="0 0 60 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 15C15 15 12 5 20 5C28 5 25 15 35 15C45 15 42 5 50 5" stroke="#8C6239" stroke-width="1" stroke-linecap="round"/>
+                </svg>
+            </div>
+
+            <!-- 邀請函感性內文 -->
+            <article class="text-center space-y-4 md:space-y-5 text-sm md:text-base tracking-wide leading-relaxed text-wood-800 px-2 my-6 font-light">
+                <p class="font-medium text-base text-left border-b border-cream-100 pb-1 mb-4 text-wood-600">親愛的老師們：</p>
+                <p>四年的動畫旅程即將迎來「最終章」。</p>
+                <p>身為多媒體動畫應用系的<span class="font-medium text-wood-600 border-b border-wood-600/30">最後一屆學生</span>，<br>無比感謝您一路上為我們的故事線注入溫度、<br>為渲染圖賦予靈魂。</p>
+                <p>在我們踏入職場前，誠摯邀請老師們暫時放下教學工作，<br>與我們共聚圍爐，聊聊過去的趣事，<br>讓我們親口向您說聲：「老師，謝謝您！」</p>
+                <p>期待您的蒞臨，與我們一同為這個科系畫下最完美的句點。</p>
+                <!-- 調整間距並新增動畫四甲具名落款 -->
+                <p class="pt-6 text-right text-wood-600 font-medium text-xs md:text-sm tracking-widest">
+                    動畫四甲 全體畢業生 敬邀
+                </p>
+            </article>
+
+            <!-- 分割線 -->
+            <div class="relative flex py-4 items-center">
+                <div class="flex-grow border-t border-cream-200"></div>
+                <span class="flex-shrink mx-4 text-wood-500 text-xs font-serif tracking-widest">EVENT INFO</span>
+                <div class="flex-grow border-t border-cream-200"></div>
+            </div>
+
+            <!-- 活動時間與地點 -->
+            <section class="bg-cream-100/50 backdrop-blur-sm rounded-xl p-5 my-6 text-center border border-cream-100">
+                <div class="font-serif text-sm md:text-base text-wood-800 space-y-2 tracking-wide leading-loose">
+                    <p class="font-medium flex items-center justify-center gap-2">
+                        <span class="text-wood-600">🗓️</span> 2026 年 6 月 13 日 (六) 中午 12:30,
+                    </p>
+                    <p class="font-medium flex items-center justify-center gap-2">
+                        <span class="text-wood-600">📍</span> 鍋的焱 (草屯店),
+                    </p>
+                    <p class="text-wood-500 text-xs md:text-sm flex items-center justify-center gap-2">
+                        <span class="text-wood-600">📮</span> 542南投縣草屯鎮和平里虎山路829號
+                    </p>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- 底部隱約的動畫影格裝飾 -->
+        <div class="mt-6 flex justify-between px-2 opacity-10 text-[9px] font-mono tracking-widest text-wood-800">
+            <span>FRAME_0144_FINAL</span>
+            <span>多媒體動畫四甲全體學生 2022-2026</span>
+        </div>
+    </div>
+
+</body>
+</html>
